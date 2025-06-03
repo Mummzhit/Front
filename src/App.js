@@ -1,12 +1,13 @@
 import React from 'react';
-import BottomNav from './Component/BottomNav/BottomNav';
+// import BottomNav from './Component/BottomNav/BottomNav';
+import './App.css';
+import MainPage from './Pages/MainPage';
 
 function App() {
   return (
     <div className="App">
-      <h1>mummzhit
-      </h1>
-      <BottomNav onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} />
+      <MainPage />
+      
     </div>
    
   );
