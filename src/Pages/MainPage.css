@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: linear-gradient(180deg, #C5E9CE 0%, rgba(255, 255, 255, 0.75) 18.76%);
     font-family: 'Pretendard', sans-serif;
 
 }
@@ -15,6 +14,7 @@
 }
 
 .HeroSection {
+    margin-top: 30px;
     display:flex;
     flex-direction: row;
 }
