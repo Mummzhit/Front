@@ -1,28 +1,27 @@
 import React from 'react';
 
 
-export default function HomeIcon({ color = '#B5B5B5', size = 28 }) {
+export default function HomeIcon({ color = 'white'}) {
+    
     return (
         <svg 
-        width={size}
-        height={size}
-        viewBox="0 0 21 22" 
-        fill={color}
-        stroke={color}
-        strokeWidth={1.5}
-        strokeLinecap='round'
-        strokeLinejoin='round'
+            width= "20"
+            height="22"
+            viewBox="0 0 22 23" 
+            fill="none"
+            stroke={color}
+            strokeWidth={1.625}
+            strokeLinecap='round'
+            strokeLinejoin='round'
+           
+            xmlns="http://www.w3.org/2000/svg"
+        >
 
-        xmlns="http://www.w3.org/2000/svg">
 
-        <path d="M17.4333 3H3.43335C2.32878 3 1.43335 3.89543 1.43335 5V19C1.43335 20.1046 2.32878 21 3.43335 21H17.4333C18.5379 21 19.4333 20.1046 19.4333 19V5C19.4333 3.89543 18.5379 3 17.4333 3Z" />
-        <path d="M14.4333 1V5"  />
-        <path d="M6.43335 1V5"   />
-        <path d="M1.43335 9H19.4333" />
-</svg>
+            <path d="M0.81665 9.07637C0.81665 8.40775 1.12534 7.77659 1.65311 7.3661L9.23645 1.46795C10.0189 0.859415 11.1144 0.859415 11.8969 1.46795L19.4802 7.3661C20.008 7.77659 20.3167 8.40775 20.3167 9.07636V19.9334C20.3167 20.508 20.0884 21.0591 19.682 21.4654C19.2757 21.8717 18.7246 22.1 18.15 22.1H2.98332C2.40868 22.1 1.85758 21.8717 1.45125 21.4654C1.04492 21.0591 0.81665 20.508 0.81665 19.9334V9.07637Z"/>
+            <path d="M7.31665 22.0999V13.4333C7.31665 12.2366 8.2867 11.2666 9.48332 11.2666H11.65C12.8466 11.2666 13.8167 12.2367 13.8167 13.4333V22.0999" />
+        </svg>       
 
-        
-        
     );
 }
 
