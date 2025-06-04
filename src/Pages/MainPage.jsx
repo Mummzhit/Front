@@ -6,6 +6,7 @@ import './MainPage.css';
 import HeroInfoContainer from '../Component/HeroSection/HeroInfoContainer';
 import GreetingText from '../Component/HeroSection/GreetingText';
 import MainCalendar from '../Component/MainCalendar/MainCalendar';
+import HeaderNav from '../Component/HeaderNav/HeaderNav';
 
 export default function MainPage() {
     const username = "멋쟁이 사자처럼";
@@ -14,6 +15,7 @@ export default function MainPage() {
 
     return (
         <div className="main-page">
+            <HeaderNav/>
             <div className='HeroSection'>
                 <div className='HeroSection-left'>
                     <GreetingText username={username} />
