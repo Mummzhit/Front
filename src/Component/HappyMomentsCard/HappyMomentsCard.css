@@ -1,0 +1,41 @@
+
+
+.happy-moments-card {
+    width: 205px;
+    height: 169px;
+    /* padding: 0px 10px; */
+
+
+}
+
+.happy-moments-card p,span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2; /* 기본은 1.5~1.6쯤이라 좁혀주면 됨 */
+    margin: 0.2em 0; /* 위아래 여백도 조금 줄이기 */
+}
+
+.book-moment {
+    
+    background-color: #DBE5ED ;
+    border-radius: 12px;
+    padding: 16px 12px;
+
+}
+
+.walk-moment{
+    background-color: pink ;
+    border-radius: 12px;
+    padding: 16px 12px;
+    
+}
+
+.moments-image{
+    background-color: bisque;
+    width: 173px;
+    height:75px;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
