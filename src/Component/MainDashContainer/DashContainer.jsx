@@ -2,6 +2,7 @@ import React from "react";
 import ChallengeStatusCard from "../ChallengeStatusCard/ChallengeStatusCard";
 import NumbMomentsCard from "../NumbMomentsCard/NumbMomentsCard";
 import './DashContainer.css'
+import HappyMomentsSection from "../HappyMomentsCard/HappyMomentsSection";
 
 export default function DashContainer (){
     const username = '멋쟁이사자처럼';
@@ -15,6 +16,15 @@ export default function DashContainer (){
     const sns1 ='유튜브';
     const sns2 ='인스타그램';
     const averagewatchingtime = '46'
+
+    const data = [
+        { type: 'book', image: '/img1.jpg', writer: '이시구로', booktitle: '<클라라와 태양>' },
+        { type: 'walk', image: '/img2.jpg', place: '양재천' },
+        // 더 추가...
+      ]
+      
+      
+      
      
 
     return (
@@ -22,6 +32,10 @@ export default function DashContainer (){
             <div className='challenge-status-card'>
                 <ChallengeStatusCard username={username} day = {day} safetime={safetime}/>
             </div>
+            <div>
+                <HappyMomentsSection data={data} />
+            </div>
+            
             <div className ='numb-moments-card'>
                 <NumbMomentsCard  username={username} days={days} session={session} isIndividual={isIndividual} emotion1={emotion1} emotion2={emotion2} sns1={sns1} sns2={sns2} averagewatchingtime={averagewatchingtime}/>   
             </div>

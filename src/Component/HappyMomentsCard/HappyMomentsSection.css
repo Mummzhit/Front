@@ -1,0 +1,19 @@
+.happy-moments{
+    margin-left: 100px;
+    margin-top: 40px ;
+}
+
+.card-scroll-container {
+    
+    display:flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-top: 10px;
+}
+
+.happy-moments h1 {
+    font-size: 16px;
+    font-weight: 600 ;
+    color: #383325;
+
+}
