@@ -1,5 +1,5 @@
 import React from 'react';
-import BottomNav from '../Component/BottomNav/BottomNav';
+
 import './MainPage.css';
 
 
