@@ -7,6 +7,7 @@ import HeroInfoContainer from '../Component/HeroSection/HeroInfoContainer';
 import GreetingText from '../Component/HeroSection/GreetingText';
 import MainCalendar from '../Component/MainCalendar/MainCalendar';
 import HeaderNav from '../Component/HeaderNav/HeaderNav';
+import DashContainer from '../Component/MainDashContainer/DashContainer';
 
 export default function MainPage() {
     const username = "멋쟁이 사자처럼";
@@ -15,17 +16,18 @@ export default function MainPage() {
 
     return (
         <div className="main-page">
-            <HeaderNav/>
+            <div className="headernav"> <HeaderNav/></div>
             <div className='HeroSection'>
                 <div className='HeroSection-left'>
                     <GreetingText username={username} />
                     <HeroInfoContainer level={level} />
                 </div>
                 <div className='HeroSection-right'>
-                    <img className='HeroSection-image' src="/Mummum.png" alt="Mummum" />
+                    <img className='HeroSection-image' src="/Mummum_new.png" alt="Mummum" />
                 </div>   
             </div>
             <MainCalendar baseDate={baseDate}/>
+            <DashContainer/>
             <BottomNav onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} /> 
         </div>
     );
