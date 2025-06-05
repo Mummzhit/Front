@@ -1,0 +1,39 @@
+.mummmum-DDAYITEM {
+    width: 335px;
+    height: 85px;
+    background-color: #FFF6D0;
+    display: flex;
+    flex-direction: row;
+    border-radius: 100px;
+    margin-top: 49.65px;
+    display: flex;
+    align-items: center;
+
+}
+
+.mummum-DDAYITEM-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+   
+    
+}
+
+.mummum-DDAYITEM-text-firstline {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mummum-DDAYITEM-text-secondline {
+    font-size: 12px;
+    font-weight:500;
+
+
+}
+
+.mummum-DDAYITEM-img {
+    width: 48px;
+    height: 48px;
+    margin-left: 24px;
+
+}
