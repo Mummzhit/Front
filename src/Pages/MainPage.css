@@ -1,7 +1,8 @@
 .main-page {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    width: 375px;
+    height: 1771px;
     font-family: 'Pretendard', sans-serif;
     overflow: hidden;
 
@@ -21,6 +22,7 @@
     height: 178.18px;
     margin-top: 31.44px;
     display:flex;
+    
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;            /* 세로축 가운데 정렬 */       

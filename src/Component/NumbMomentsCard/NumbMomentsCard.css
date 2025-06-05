@@ -1,0 +1,30 @@
+.numb-moments{
+    margin-top: 80px;
+    margin-left: 10px;
+    color: #383325;
+    
+    
+}
+
+.numb-moments .username{
+    background-color: transparent;
+    font-weight: 600;
+
+
+}
+.numb-moments span{
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #F1FAEE;
+    border-radius: 16px;
+    padding: 6px;
+    line-height: 30px;
+    color: #498962;
+  
+}
+
+.numb-moments h1 {
+    font-size: 16px;
+    font-weight: 600 ;
+    color: #383325;
+}

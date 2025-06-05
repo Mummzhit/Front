@@ -6,6 +6,23 @@
     box-shadow: 0px 0px 24px #E1F0D9 ;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     
 }
+
+
+.numb-moments-card {
+    width: 335px;
+    height: auto;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 415.66px;
+    background-color:transparent;
+    overflow: hidden;
+
+}
+
+
+
