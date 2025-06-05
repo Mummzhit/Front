@@ -6,7 +6,7 @@
 .card-scroll-container {
     
     display:flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     gap: 16px;
     padding-top: 10px;
 }

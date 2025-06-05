@@ -1,7 +1,7 @@
 .calendar-container {
     display: flex;
     justify-content: space-between;
-    padding: 12px;
+    padding: 20px;
     background: transparent;
     border-radius: 12px;
   }
@@ -9,11 +9,10 @@
   .calendar-item {
     text-align: center;
     width: 100%;
-    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
     height: 70px; /* 고정 높이로 정렬 유지 */
   }
   
@@ -26,19 +25,19 @@
   .calendar-day.today {
     color: #498962;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-weight: SemiBold;
+    font-weight: 500;
   }
   
   .calendar-date {
     width: 28px;
     height: 28px;
-    font-weight: Medium;
+    font-weight: 400;
     font-size: 16px;
     color: #A3D9B1;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%; /* 모양이 없어도 유지 */
+    border-radius: 50px; /* 모양이 없어도 유지 */
   }
   
   .calendar-date.today-circle {
