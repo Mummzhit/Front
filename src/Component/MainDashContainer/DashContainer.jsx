@@ -18,10 +18,9 @@ export default function DashContainer (){
     const averagewatchingtime = '46'
 
     const data = [
-        { type: 'book', image: '/img1.jpg', writer: '이시구로', booktitle: '<클라라와 태양>' },
-        { type: 'walk', image: '/img2.jpg', place: '양재천' },
-        // 더 추가...
-      ]
+        { type: 'book', image: '/Mummum_new.png', writer: '가즈오 이시구로', booktitle: '<클라라와 태양>' },
+        { type: 'walk', image: '/Mummum_new.png', place: '양재천' },
+    ]
       
       
       
