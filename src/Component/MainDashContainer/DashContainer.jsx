@@ -1,14 +1,33 @@
 import React from "react";
 import ChallengeStatusCard from "../ChallengeStatusCard/ChallengeStatusCard";
+import NumbMomentsCard from "../NumbMomentsCard/NumbMomentsCard";
 import './DashContainer.css'
 
 export default function DashContainer (){
-    const username = '멋쟁이 사자처럼';
+    const username = '멋쟁이사자처럼';
     const day = '9';
     const safetime ='146';
+    const days='목요일';
+    const session ='오후';
+    const isIndividual='혼자';
+    const emotion1 ='무료하고';
+    const emotion2 ='심심하다';
+    const sns1 ='유튜브';
+    const sns2 ='인스타그램';
+    const averagewatchingtime = '46'
+     
+
     return (
         <div className="Main-Dash-Container">
-        <ChallengeStatusCard className='challenge-status-card' username={username} day = {day} safetime={safetime}/></div>
+            <div className='challenge-status-card'>
+                <ChallengeStatusCard username={username} day = {day} safetime={safetime}/>
+            </div>
+            <div className ='numb-moments-card'>
+                <NumbMomentsCard  username={username} days={days} session={session} isIndividual={isIndividual} emotion1={emotion1} emotion2={emotion2} sns1={sns1} sns2={sns2} averagewatchingtime={averagewatchingtime}/>   
+            </div>
+            
+        </div>
+
         
     )
 }
