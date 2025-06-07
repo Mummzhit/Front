@@ -10,9 +10,9 @@ export default function DashContainer (){
     const safetime ='146';
     const days='목요일';
     const session ='오후';
-    const isIndividual='혼자';
-    const emotion1 ='무료하고';
-    const emotion2 ='심심하다';
+
+    const emotion1 ='무료하다';
+   
     const sns1 ='유튜브';
     const sns2 ='인스타그램';
     const averagewatchingtime = '46'
@@ -36,7 +36,7 @@ export default function DashContainer (){
             </div>
             
             <div className ='numb-moments-card'>
-                <NumbMomentsCard  username={username} days={days} session={session} isIndividual={isIndividual} emotion1={emotion1} emotion2={emotion2} sns1={sns1} sns2={sns2} averagewatchingtime={averagewatchingtime}/>   
+                <NumbMomentsCard  username={username} days={days} session={session}  emotion1={emotion1} sns1={sns1} sns2={sns2} averagewatchingtime={averagewatchingtime}/>   
             </div>
             
         </div>

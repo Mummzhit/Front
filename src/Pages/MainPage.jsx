@@ -8,7 +8,6 @@ import GreetingText from '../Component/HeroSection/GreetingText';
 import MainCalendar from '../Component/MainCalendar/MainCalendar';
 import HeaderNav from '../Component/HeaderNav/HeaderNav';
 import DashContainer from '../Component/MainDashContainer/DashContainer';
-import BottomNav from '../Component/BottomNav/BottomNav'
 
 export default function MainPage() {
     const username = "멋쟁이사자처럼";
@@ -29,7 +28,6 @@ export default function MainPage() {
             </div>
             <MainCalendar baseDate={baseDate}/>
             <DashContainer/>
-            <BottomNav onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} /> 
         </div>
     );
 }

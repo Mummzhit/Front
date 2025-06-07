@@ -3,10 +3,20 @@
     margin-top: 40px ;
 }
 
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.happy-moments .title span {
+    margin-left: 90px;
+}
+
 .card-scroll-container {
     
     display:flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     gap: 16px;
     padding-top: 10px;
 }

@@ -1,10 +1,23 @@
 .numb-moments{
-    margin-top: 80px;
+    margin-top: 25px;
     margin-left: 10px;
     color: #383325;
     
     
 }
+
+.numb-moments .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title span {
+    margin-left: 90px;
+}
+
+
+
 
 .numb-moments .username{
     background-color: transparent;
@@ -12,7 +25,7 @@
 
 
 }
-.numb-moments span{
+.contents span{
     font-size: 12px;
     font-weight: 600;
     background-color: #F1FAEE;

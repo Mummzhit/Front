@@ -11,6 +11,7 @@
 .happy-moments-text {
     margin-top: 5px;
 }
+
 .happy-moments-card p,span {
     font-size: 12px;
     font-weight: 400;
@@ -28,7 +29,7 @@
 }
 
 .walk-moment{
-    background-color: pink ;
+    background-color: #FFFFFF ;
     border-radius: 12px;
     padding: 16px 12px;
     
