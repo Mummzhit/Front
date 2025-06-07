@@ -6,13 +6,26 @@
     
 }
 
+.numb-moments .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title span {
+    margin-left: 90px;
+}
+
+
+
+
 .numb-moments .username{
     background-color: transparent;
     font-weight: 600;
 
 
 }
-.numb-moments span{
+.contents span{
     font-size: 12px;
     font-weight: 600;
     background-color: #F1FAEE;

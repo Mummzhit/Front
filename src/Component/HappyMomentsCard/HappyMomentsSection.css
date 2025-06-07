@@ -3,6 +3,16 @@
     margin-top: 40px ;
 }
 
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.happy-moments .title span {
+    margin-left: 90px;
+}
+
 .card-scroll-container {
     
     display:flex;
