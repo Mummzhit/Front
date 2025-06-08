@@ -1,0 +1,57 @@
+.mission-card {
+    width: 330.02px;
+    height: 42px;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    background-color: #F0F4FD;
+    gap: 9px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 12px;
+    
+
+}
+
+.mission-card .icon{
+    margin-left: 16px;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.mission-card.done{
+    background-color: #E1F0D9;
+}
+
+.mission-card-left-contents {
+    height: 16px;
+    width: auto;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.mission-card .action-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    background-color: #A3D9B1;
+    border-radius: 71.43px ;
+    margin-right: 8px;
+    font-weight: 500;;
+    color: #ffffff;
+
+}
+
+
+
