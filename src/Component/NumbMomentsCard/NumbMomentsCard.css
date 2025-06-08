@@ -1,31 +1,44 @@
 .numb-moments{
-    margin-top: 25px;
-    margin-left: 10px;
-    color: #383325;
+    color: #252420;
+    width: 390px;
+    height: auto;
+    /* margin-left: 100px;
+    margin-top: 40px ; */
     
     
 }
 
-.numb-moments .title{
+.numb-moments-title {
+    color: #252420;
+    width: 390px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+
 }
 
-.title span {
-    margin-left: 90px;
+.numb-moments-title span{
+    color: #252420;
+    width: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 
 
 
-.numb-moments .username{
+
+.numb-moments-contents .username{
     background-color: transparent;
     font-weight: 600;
 
 
 }
-.contents span{
+.numb-moments-contents span{
     font-size: 12px;
     font-weight: 600;
     background-color: #F1FAEE;
@@ -36,8 +49,8 @@
   
 }
 
-.numb-moments h1 {
+.numb-moments-title h1 {
     font-size: 16px;
     font-weight: 600 ;
-    color: #383325;
+    color: #252420;
 }

@@ -9,10 +9,11 @@ import MainCalendar from '../Component/MainCalendar/MainCalendar';
 import HeaderNav from '../Component/HeaderNav/HeaderNav';
 import DashContainer from '../Component/MainDashContainer/DashContainer';
 
+
 export default function MainPage() {
     const username = "멋쟁이사자처럼";
     const level = 1;
-    const baseDate = "2025-06-01"; // 기준 날짜 (예시)
+    const baseDate = new Date(); // 기준 날짜 (예시)
 
     return (
         <div className="main-page">

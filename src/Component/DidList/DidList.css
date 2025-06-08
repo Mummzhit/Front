@@ -1,31 +1,27 @@
-.happy-moments{
+.did-list {
     width: 390px;
     height: auto;
     /* margin-left: 100px;
     margin-top: 40px ; */
+
+
 }
 
-.happy-moments .title{
+.did-list-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px
+
 }
 
 
 
-.card-scroll-container {
-    
-    display:flex;
-    overflow-x: scroll;
-    margin-left: 30px;
-    gap: 16px;
-    padding-top: 10px;
-}
 
-.happy-moments h1 {
+
+.did-list-title h1 {
     font-size: 16px;
     font-weight: 600 ;
-    color: #252420;
+    color: #383325;
 
 }

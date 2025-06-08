@@ -3,6 +3,8 @@ import ChallengeStatusCard from "../ChallengeStatusCard/ChallengeStatusCard";
 import NumbMomentsCard from "../NumbMomentsCard/NumbMomentsCard";
 import './DashContainer.css'
 import HappyMomentsSection from "../HappyMomentsCard/HappyMomentsSection";
+import DidList from "../DidList/DidList";
+import ToDoList from "../ToDoList/ToDoList";
 
 export default function DashContainer (){
     const username = '멋쟁이사자처럼';
@@ -38,6 +40,16 @@ export default function DashContainer (){
             <div className ='numb-moments-card'>
                 <NumbMomentsCard  username={username} days={days} session={session}  emotion1={emotion1} sns1={sns1} sns2={sns2} averagewatchingtime={averagewatchingtime}/>   
             </div>
+
+            <div className="did-list">
+                <DidList/>
+            </div>
+
+            <div className="to-do-list">
+                <ToDoList/>
+            </div>
+
+
             
         </div>
 
