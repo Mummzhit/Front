@@ -1,0 +1,21 @@
+.login-button{
+    width: 335px;
+    height: 43px;
+    gap: 10px;
+    padding: 24 10px;
+    font-size: 16px;
+    font-weight: 400px;
+    border-radius: 12px;
+}
+
+.login-button.login {
+    background-color: #9DC1E5;
+    color: #ffffff;
+}
+
+.login-button.sign-up {
+    background-color: transparent;
+    color: #9DC1E5;
+    margin-top: 20px;
+}
+
