@@ -15,7 +15,7 @@ export default function NumbMomentsCard ({username, days, session, emotion1, sns
                 <div><span className = 'username'>{username}</span>님은<span>{days}</span><span>{session}</span> 에</div>
                 <div><span>{emotion1}</span> 는 감정을 느껴</div>
                 <div><span>{sns1}</span> 나 <span>{sns2}</span> 을 켜는 경우가 많았어요.</div>
-                <div>이때의 평균 시청 시간은 <span>{averagewatchingtime}</span>분 이었어요. </div>
+                <div>&nbsp;이때의 평균 시청 시간은 <span>{averagewatchingtime}</span>분 이었어요. </div>
             </div>
         </div>
         
