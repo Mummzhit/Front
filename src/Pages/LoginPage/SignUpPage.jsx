@@ -29,9 +29,9 @@ export default function SignUpPage () {
         console.log ('login button is pressed')
     };
 
-    const handleSignUp = () => {
-        navigate('/sign-up');
-        console.log ('sign up button is pressed')
+    const handleSignUpSuccess = () => {
+        navigate('/sign-up-success');
+        console.log ('sign up success')
     };
 
 
@@ -50,7 +50,7 @@ export default function SignUpPage () {
             </div>
             
             <div className="button-zone">
-                    <LoginButton type = 'login' text ='계정 등록하기' onClick={handleSignUp}/>
+                    <LoginButton type = 'login' text ='계정 등록하기' onClick={handleSignUpSuccess}/>
                     <LoginButton type = 'sign-up' text ='로그인하기' onClick={handleLogin}/>
                 </div>
                 
