@@ -6,6 +6,7 @@
     background: linear-gradient(180deg, #C5E9CE 0%, rgba(255, 255, 255, 0.75) 28%);
     font-family: 'Pretendard', sans-serif;
     overflow-y:scroll;
+    
 
 
 }
@@ -41,3 +42,11 @@ img {
     padding: 0 15px;
 }
 
+.BottonNav{
+    position: fixed;      /* 화면에 고정 */
+    bottom: 0;            /* 하단에 붙이기 */
+    left: 50%;            /* 왼쪽에서 50% 위치 */
+    transform: translateX(-50%); /* 가로 중앙 정렬 */
+    width: 360px;         /* 너비 지정 (원하는 크기로 조절) */
+    z-index: 1000;        /* 다른 요소 위에 나오도록 */
+}

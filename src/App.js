@@ -8,6 +8,7 @@ import BottomNav from './Component/BottomNav/BottomNav';
 import LoginOnboardingPage from './Pages/LoginPage/LoginOnboardingPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import SignUpPage from './Pages/LoginPage/SignUpPage';
+import SignUpSuccessPage from './Pages/LoginPage/SignUpSuccessPage';
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
           <Route path='/' element={<LoginOnboardingPage/>} />
           <Route path='/main' element={<MainPage/>} />
           <Route path='/sign-up' element={<SignUpPage/>} />
+          <Route path='/sign-up-success' element={<SignUpSuccessPage/>} />
         </Routes>
           {/* <LoginPage/> */}
           {/* <LoginOnboardingPage/> */}
           {/* <MainPage />
-          <BottomNav className='BottomNav' onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} /> 
+          
           */}
       </div>
     </Router>
