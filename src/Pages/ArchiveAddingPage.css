@@ -1,0 +1,128 @@
+/* 전체 페이지 컨테이너 */
+.archive-page-container {
+  background-color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* 상단 네비게이션 */
+.archive-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  flex-shrink: 0;
+}
+.nav-icon {
+  cursor: pointer;
+  color: #333;
+}
+
+/* 메인 컨텐츠 영역 */
+.archive-main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* 날짜 및 제목 헤더 */
+.archive-header {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.archive-header .current-date {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+.archive-header .title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 4px 0 0 0;
+}
+
+/* 캘린더 섹션 */
+.calendar-section {
+  width: 100%;
+}
+
+/* react-calendar 기본 스타일 덮어쓰기 */
+.custom-calendar {
+  border: none;
+  width: 100%;
+  font-family: inherit;
+}
+.custom-calendar .react-calendar__navigation button {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+.custom-calendar .react-calendar__navigation button:enabled:hover,
+.custom-calendar .react-calendar__navigation button:enabled:focus {
+  background-color: #f0f0f0;
+}
+.custom-calendar .react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+  font-weight: 500;
+  color: #9e9e9e;
+}
+.custom-calendar abbr[title="일요일"] { color: #f44336; }
+.custom-calendar abbr[title="토요일"] { color: #2196f3; }
+
+.custom-calendar .react-calendar__tile {
+  color: #333;
+  background: none;
+  border: none;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.custom-calendar .react-calendar__tile:enabled:hover,
+.custom-calendar .react-calendar__tile:enabled:focus {
+  background-color: #f0f0f0;
+}
+.custom-calendar .react-calendar__tile--now {
+  background: #e3f2fd;
+}
+.custom-calendar .react-calendar__tile--active {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+.custom-calendar .react-calendar__tile--active:enabled:hover,
+.custom-calendar .react-calendar__tile--active:enabled:focus {
+  background: #a5d6a7;
+}
+
+/* 기록 추가 카드 */
+.add-record-section {
+  margin-top: 24px;
+  padding-bottom: 24px;
+  
+}
+.add-record-card {
+  background-color: #f1f8e9;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: normal;
+  cursor: pointer;
+  gap: 12px;
+  height: 240px; 
+  width: 180px;
+}
+.add-record-card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.4;
+  font-family: Pretendard;
+}
+.save-button-container {
+  margin-top: 24px;
+}

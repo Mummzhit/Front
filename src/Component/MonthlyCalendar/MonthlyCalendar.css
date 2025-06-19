@@ -1,0 +1,92 @@
+/* 전체 달력 컨테이너 */
+.custom-calendar-container .react-calendar {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 상단 네비게이션 (예: < 2025년 6월 >) 스타일 */
+.custom-calendar-container .react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.custom-calendar-container .react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 요일(sun, mon, tue...) 표시 스타일 */
+.custom-calendar-container .react-calendar__month-view__weekdays__weekday {
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 0.8em;
+  text-transform: capitalize; /* 첫 글자만 대문자로 (선택사항) */
+}
+
+/* 요일 약어(abbr) 태그의 밑줄 제거 */
+.custom-calendar-container .react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+}
+
+/* 일요일(sun) 글자색 */
+.custom-calendar-container .react-calendar__month-view__weekdays__weekday:first-child abbr {
+  color: red;
+}
+
+/* 토요일(sat) 글자색 */
+.custom-calendar-container .react-calendar__month-view__weekdays__weekday:last-child abbr {
+  color: blue;
+}
+
+/* 날짜(tile) 하나하나의 기본 스타일 */
+.custom-calendar-container .react-calendar__tile {
+  background: none;
+  border: none;
+  text-align: center;
+  height: 50px; /* 각 날짜 칸의 높이 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #a0a0a0; /* 기본 날짜 색상 */
+}
+
+/* ▼▼▼▼▼ 여기가 핵심! 현재 날짜 스타일 ▼▼▼▼▼ */
+/* 오늘 날짜 (react-calendar__tile--now) 스타일 */
+.custom-calendar-container .react-calendar__tile--now {
+  background: #C8E6C9; /* 초록색 동그라미 배경 */
+  border-radius: 50%; /* 원 모양으로 만들기 */
+  color: #1B5E20; /* 진한 녹색 글자 */
+  font-weight: bold;
+}
+/* ▲▲▲▲▲ 여기까지가 핵심입니다 ▲▲▲▲▲ */
+
+
+/* 선택된 날짜 (react-calendar__tile--active) 스타일 */
+/* 현재 날짜와 똑같은 스타일을 주거나, 다른 스타일을 줄 수 있습니다. */
+.custom-calendar-container .react-calendar__tile--active {
+  background: #C8E6C9;
+  border-radius: 50%;
+  color: #1B5E20;
+  font-weight: bold;
+}
+
+/* 마우스를 올렸을 때의 스타일 (선택사항) */
+.custom-calendar-container .react-calendar__tile:enabled:hover,
+.custom-calendar-container .react-calendar__tile:enabled:focus {
+  background: #e8f5e9;
+  border-radius: 50%;
+}
+
+/* 다른 달의 날짜들은 흐리게 처리 */
+.custom-calendar-container .react-calendar__month-view__days__day--neighboringMonth {
+  color: #d0d0d0;
+}

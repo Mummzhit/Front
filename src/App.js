@@ -4,11 +4,13 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import MainPage from './Pages/MainPage';
-import BottomNav from './Component/BottomNav/BottomNav';
 import LoginOnboardingPage from './Pages/LoginPage/LoginOnboardingPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import SignUpPage from './Pages/LoginPage/SignUpPage';
 import SignUpSuccessPage from './Pages/LoginPage/SignUpSuccessPage';
+import ArchivePage from './Pages/ArchivePage';
+import ArchiveAddingPage from './Pages/ArchiveAddingPage';
+import ArchiveAddedPage from './Pages/ArchiveAddedPage';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           <Route path='/main' element={<MainPage/>} />
           <Route path='/sign-up' element={<SignUpPage/>} />
           <Route path='/sign-up-success' element={<SignUpSuccessPage/>} />
+          <Route path='/archive' element={<ArchivePage />} /> 
+          <Route path='/archive-adding' element={<ArchiveAddingPage />} /> 
+          <Route path='/archive-added' element={<ArchiveAddedPage />} />
         </Routes>
           {/* <LoginPage/> */}
           {/* <LoginOnboardingPage/> */}
