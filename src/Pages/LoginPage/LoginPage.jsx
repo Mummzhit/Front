@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import LoginTextField from "../../Component/LoginPage/LoginTextField";
 import InputField from "../../Component/LoginPage/InputField";
+import { login } from "../../Utils/api"
 
 
 export default function LoginPage () {
@@ -22,15 +23,26 @@ export default function LoginPage () {
     console.log("입력된 비밀번호:", e.target.value);
   };
 
-    const handleLogin = () => {
-        navigate ('/main');
-        console.log ('login button is pressed')
+    const handleSignUp = () => {
+        navigate ('/sign-up');
+        console.log ('sign-up button is pressed')
     };
 
-    const handleSignUp = () => {
-        navigate('/sign-up');
-        console.log ('sign up button is pressed')
-    };
+    const handleLogin = async () => {
+        try {
+            const data = await login(email,password);
+            const { grantType, accessToken, refreshToken } = data;
+            sessionStorage.setItem('ACCESS_TOKEN', `${grantType} ${accessToken}`);
+            localStorage.setItem('REFRESH_TOKEN', refreshToken);
+            navigate('/main');
+        } catch (error) {
+            alert('서버와 연결할 수 없습니다.');
+        }
+        };
+        
+                // navigate('/sign-up');
+                // console.log ('sign up button is pressed')
+
 
 
     
