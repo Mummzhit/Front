@@ -5,6 +5,7 @@ import './DashContainer.css'
 import HappyMomentsSection from "../HappyMomentsCard/HappyMomentsSection";
 import DidList from "../DidList/DidList";
 import ToDoList from "../ToDoList/ToDoList";
+import BottomNav from "../BottomNav/BottomNav";
 
 export default function DashContainer (){
     const username = '멋쟁이사자처럼';
@@ -48,6 +49,7 @@ export default function DashContainer (){
             <div className="to-do-list">
                 <ToDoList/>
             </div>
+        
 
 
             

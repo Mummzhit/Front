@@ -30,7 +30,7 @@ export default function MainPage() {
             </div>
             <MainCalendar baseDate={baseDate}/>
             <DashContainer/>
-            <BottomNav className='BottomNav' onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} /> 
+            <div className='BottomNav'> <BottomNav  onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} /> </div>
         </div>
     );
 }
