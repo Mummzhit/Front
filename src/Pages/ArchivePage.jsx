@@ -6,6 +6,8 @@ import BottomNav from '../Component/BottomNav/BottomNav';
 import { useNavigate } from 'react-router-dom';
 import ArchiveTopNav from '../Component/ArchiveTopNav/ArchiveTopNav';
 import ArchiveDateHeader from '../Component/ArchiveDateHeader/ArchiveDateHeader';
+import MonthlyCalendar from '../Component/MonthlyCalendar/MonthlyCalendar';
+
 
 export default function ArchivePage() {
   const [date, setDate] = useState(new Date());
@@ -21,16 +23,7 @@ export default function ArchivePage() {
       <ArchiveTopNav/>
       <main className="archive-main-content">
         <ArchiveDateHeader/>
-        {/* 3. 캘린더 */}
-        <section className="calendar-section">
-          <Calendar
-            onChange={setDate}
-            value={date}
-            formatDay={(locale, date) => date.getDate()}
-            calendarType="gregory"
-            className="custom-calendar"
-          />
-        </section>
+        <MonthlyCalendar/>
 
         {/* 4. 기록 추가 카드 */}
         <section className="add-record-section" onClick={handleAddRecordClick}>
@@ -39,6 +32,7 @@ export default function ArchivePage() {
           </div>
         </section>
       </main>
+      <BottomNav className='BottomNav' onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} /> 
     </div>
   );
 }

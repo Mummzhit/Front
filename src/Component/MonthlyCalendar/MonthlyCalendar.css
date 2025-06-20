@@ -1,92 +1,97 @@
-/* 전체 달력 컨테이너 */
-.custom-calendar-container .react-calendar {
+.monthly-calendar {
   width: 100%;
-  border: none;
-  border-radius: 12px;
-  background-color: white;
-  padding: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  box-sizing: border-box;
 }
 
-/* 상단 네비게이션 (예: < 2025년 6월 >) 스타일 */
-.custom-calendar-container .react-calendar__navigation {
-  display: flex;
-  height: 44px;
-  margin-bottom: 1em;
-}
-
-.custom-calendar-container .react-calendar__navigation button {
-  min-width: 44px;
-  background: none;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* 요일(sun, mon, tue...) 표시 스타일 */
-.custom-calendar-container .react-calendar__month-view__weekdays__weekday {
+/* 요일 헤더 (sun, mon, ...) */
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7개의 동일한 너비의 열 생성 */
   text-align: center;
+  margin-bottom: 12px;
+  color: #888;
+  font-size: 14px;
   font-weight: 500;
-  padding-bottom: 0.8em;
-  text-transform: capitalize; /* 첫 글자만 대문자로 (선택사항) */
 }
 
-/* 요일 약어(abbr) 태그의 밑줄 제거 */
-.custom-calendar-container .react-calendar__month-view__weekdays__weekday abbr {
-  text-decoration: none;
+.day-name.sun {
+  color: #ED2F00;
 }
 
-/* 일요일(sun) 글자색 */
-.custom-calendar-container .react-calendar__month-view__weekdays__weekday:first-child abbr {
-  color: red;
+.day-name.sat {
+  color: #5EB1FF;
 }
 
-/* 토요일(sat) 글자색 */
-.custom-calendar-container .react-calendar__month-view__weekdays__weekday:last-child abbr {
-  color: blue;
+/* 날짜 그리드 */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
-/* 날짜(tile) 하나하나의 기본 스타일 */
-.custom-calendar-container .react-calendar__tile {
-  background: none;
-  border: none;
-  text-align: center;
-  height: 50px; /* 각 날짜 칸의 높이 */
+/* 날짜 셀 기본 스타일 */
+.day-cell {
+  display: flex;
+  font : Pretendard;
+  justify-content: center;
+  font-weight: 500;
+  align-items: center;
+  height: 40px;
+  font-size: 16px;
+  color: #A3D9B1;
+  border-radius: 50%;
+}
+
+.day-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  color: #a0a0a0; /* 기본 날짜 색상 */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #c2e0c6; 
 }
 
-/* ▼▼▼▼▼ 여기가 핵심! 현재 날짜 스타일 ▼▼▼▼▼ */
-/* 오늘 날짜 (react-calendar__tile--now) 스타일 */
-.custom-calendar-container .react-calendar__tile--now {
-  background: #C8E6C9; /* 초록색 동그라미 배경 */
+/* 이번 달이 아닌 날짜들 */
+.day-cell.not-current-month {
+  color: #e0f1e3; 
+}
+
+/* 오늘 날짜 (초록색 동그라미) */
+.day-text.today {
+  /* ▼▼▼ 여기서 원의 크기를 조절합니다 ▼▼▼ */
+  width: 32px;
+  height: 32px;
+  /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+  background-color: #A3D9B1;
+  color: #FFFFFF;
+  position: relative;
+}
+
+.day-text.today::after {
+  /* 가상 요소 생성을 위한 필수 속성 */
+  content: ''; 
+
+  /* 위치 설정 */
+  position: absolute; /* 부모(.day-text.today)를 기준으로 위치 결정 */
+  top: -8px;   /* 부모보다 8px 위에 */
+  left: -8px;  /* 부모보다 8px 왼쪽에 */
+  right: -8px; /* 부모보다 8px 오른쪽에 */
+  bottom: -8px;/* 부모보다 8px 아래에 */
+  /* -> 결과적으로 부모보다 사방으로 8px씩 더 큰 영역을 차지 */
+
+  /* 그라데이션 배경 */
+  background: radial-gradient(circle, #A3D9B1, transparent 70%);
+  
+  /* 모양 및 효과 */
   border-radius: 50%; /* 원 모양으로 만들기 */
-  color: #1B5E20; /* 진한 녹색 글자 */
-  font-weight: bold;
-}
-/* ▲▲▲▲▲ 여기까지가 핵심입니다 ▲▲▲▲▲ */
-
-
-/* 선택된 날짜 (react-calendar__tile--active) 스타일 */
-/* 현재 날짜와 똑같은 스타일을 주거나, 다른 스타일을 줄 수 있습니다. */
-.custom-calendar-container .react-calendar__tile--active {
-  background: #C8E6C9;
-  border-radius: 50%;
-  color: #1B5E20;
-  font-weight: bold;
+  filter: blur(10px);   /* 가장자리를 10px만큼 부드럽게 번지게 함 */
+  z-index: -1;          /* 숫자(13)보다 뒤에 위치하도록 설정 */
 }
 
-/* 마우스를 올렸을 때의 스타일 (선택사항) */
-.custom-calendar-container .react-calendar__tile:enabled:hover,
-.custom-calendar-container .react-calendar__tile:enabled:focus {
-  background: #e8f5e9;
-  border-radius: 50%;
-}
-
-/* 다른 달의 날짜들은 흐리게 처리 */
-.custom-calendar-container .react-calendar__month-view__days__day--neighboringMonth {
-  color: #d0d0d0;
-}

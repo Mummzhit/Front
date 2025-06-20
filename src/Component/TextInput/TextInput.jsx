@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './TextInput.css';
 
 export default function MemoInput() {
-  // 입력된 텍스트를 저장하기 위한 state
   const [text, setText] = useState('');
 
   // 텍스트가 변경될 때마다 state를 업데이트하는 함수

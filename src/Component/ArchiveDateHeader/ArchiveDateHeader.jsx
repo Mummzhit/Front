@@ -1,15 +1,16 @@
 import React from 'react';
+import './ArchiveDateHeader.css';
 
 export default function DateHeader() {
   const today = new Date();
   const year = today.getFullYear();
-  const month = today.toLocaleString('ko-KR', { month: 'long' });
-  const day = today.getDate();
-  const formattedDate = `${year}년 ${month} ${day}일`;
+  const month = String(today.getMonth() + 1).padStart(2, '0'); 
+  const day = String(today.getDate()).padStart(2, '0');
+  const formattedDate = `${year}년 ${month}월 ${day}일`;
 
   return (
     <section className="archive-header">
-      <p className="current-date">{formattedDate}</p>
+      <h3 className="current-date">{formattedDate}</h3>
       <h2 className="title">오늘의 멈칫을 기록해 볼까요?</h2>
     </section>
   );
