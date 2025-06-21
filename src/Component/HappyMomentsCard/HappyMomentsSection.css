@@ -15,7 +15,8 @@
 
 
 .card-scroll-container {
-    
+    width: 335px;
+    height: auto;
     display:flex;
     overflow-x: scroll;
     margin-left: 30px;
