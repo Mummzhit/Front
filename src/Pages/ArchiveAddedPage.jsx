@@ -22,10 +22,8 @@ export default function ArchivePage() {
       <ArchiveTopNav/>
       <main className="archive-main-content">
         <ArchiveDateHeader/>
-        {/* 3. 캘린더 */}
+        <h2 className="title">오늘의 멈칫을 돌아볼까요?</h2>
         <MonthlyCalendar />
-
-        {/* 4. 기록 추가 카드 */}
         <section className="add-record-section" onClick={handleAddRecordClick}>
           <div className="add-record-card">
             <p>오늘의 멈칫<br/>추가하기</p>

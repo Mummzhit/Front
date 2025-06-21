@@ -18,11 +18,11 @@ export default function ArchiveAddingPage() {
 
   return (
     <div className="archive-page-container">
-      
-
       <main className="archive-main-content">
         <ArchiveTopNav onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} />
         <ArchiveDateHeader/>
+        <h2 className="title">오늘의 멈칫을 기록해 볼까요?</h2>
+        
         <h3>시작 시간을 입력해 주세요</h3>
         <TimeRollerPicker/>
         <h3>종료 시간을 입력해 주세요</h3>

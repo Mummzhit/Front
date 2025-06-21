@@ -11,7 +11,6 @@ export default function DateHeader() {
   return (
     <section className="archive-header">
       <h3 className="current-date">{formattedDate}</h3>
-      <h2 className="title">오늘의 멈칫을 기록해 볼까요?</h2>
     </section>
   );
 }

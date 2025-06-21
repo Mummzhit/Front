@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 320px;
-  height: 200px;
+  width: 335px;
+  height: 122px;
   margin: auto;
   position: relative; /* 오버레이를 위한 기준점 */
-  background-color: #f8f9fa;
+  background-color: #FFFFFF;
   border-radius: 20px;
 }
 .picker-column {
@@ -27,8 +27,8 @@
   right: 0;
   transform: translateY(-50%);
   height: 40px; /* Roller의 ITEM_HEIGHT와 동일하게 */
-  background-color: #E6F0E9; /* 이미지의 연한 녹색 배경 */
-  border-radius: 12px;
+  background-color: #E1F0D9; /* 이미지의 연한 녹색 배경 */
+  border-radius: 40px;
   z-index: 0; /* 롤러보다 아래에 위치 */
   pointer-events: none; /* 마우스 이벤트를 통과시켜 드래그가 되도록 */
 }

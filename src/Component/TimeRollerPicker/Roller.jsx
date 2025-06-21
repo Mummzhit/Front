@@ -9,12 +9,16 @@ export default function Roller({ items, value, onChange }) {
   const [startY, setStartY] = useState(0);
   const [initialScrollTop, setInitialScrollTop] = useState(0);
 
-  // value prop이 변경될 때 스크롤 위치를 동기화
+  // ▼▼▼ 1. 현재 활성화된 인덱스를 저장할 state 추가 ▼▼▼
+  const [activeIndex, setActiveIndex] = useState(items.indexOf(value));
+
+  // value prop이 변경될 때 스크롤 위치 및 activeIndex 동기화
   useEffect(() => {
     const selectedIndex = items.indexOf(value);
     if (selectedIndex > -1 && rollerRef.current) {
       const targetScrollTop = selectedIndex * ITEM_HEIGHT;
       rollerRef.current.scrollTop = targetScrollTop;
+      setActiveIndex(selectedIndex);
     }
   }, [value, items]);
 
@@ -35,16 +39,24 @@ export default function Roller({ items, value, onChange }) {
     if (!isDragging) return;
     setIsDragging(false);
 
-    // 드래그가 끝나면 가장 가까운 항목으로 스크롤을 '스냅'
     const currentScrollTop = rollerRef.current.scrollTop;
     const closestIndex = Math.round(currentScrollTop / ITEM_HEIGHT);
     const targetScrollTop = closestIndex * ITEM_HEIGHT;
-
+    
     rollerRef.current.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
-
-    // 부모 컴포넌트로 변경된 값을 알림
+    
     onChange(items[closestIndex]);
+    setActiveIndex(closestIndex); // 활성화 인덱스 업데이트
   };
+
+  // ▼▼▼ 2. 스크롤 이벤트 핸들러 추가 ▼▼▼
+  const handleScroll = () => {
+    if (!isDragging && rollerRef.current) {
+      const currentScrollTop = rollerRef.current.scrollTop;
+      const newActiveIndex = Math.round(currentScrollTop / ITEM_HEIGHT);
+      setActiveIndex(newActiveIndex);
+    }
+  }
 
   return (
     <div 
@@ -53,11 +65,13 @@ export default function Roller({ items, value, onChange }) {
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp} // 컨테이너 밖으로 마우스가 나가도 드래그가 멈추도록
+      onMouseLeave={handleMouseUp}
+      onScroll={handleScroll} // 스크롤 이벤트 리스너 추가
     >
       <div className="roller-content">
         {items.map((item, index) => (
-          <div key={index} className="roller-item">
+          // ▼▼▼ 3. activeIndex와 현재 index를 비교하여 'active' 클래스 추가 ▼▼▼
+          <div key={index} className={`roller-item ${index === activeIndex ? 'active' : ''}`}>
             {item}
           </div>
         ))}
