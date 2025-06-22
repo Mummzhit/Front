@@ -2,13 +2,16 @@ import React from "react";
 import ChallengeStatusCard from "../ChallengeStatusCard/ChallengeStatusCard";
 import NumbMomentsCard from "../NumbMomentsCard/NumbMomentsCard";
 import './DashContainer.css'
+
+import EmotionChart from "../EmotionChart/EmotionChart";
 import HappyMomentsSection from "../HappyMomentsCard/HappyMomentsSection";
 import DidList from "../DidList/DidList";
 import ToDoList from "../ToDoList/ToDoList";
-import BottomNav from "../BottomNav/BottomNav";
+import { useState, useEffect } from "react";
+import { getProfile } from "../../Utils/api"; 
 
 export default function DashContainer (){
-    const username = '멋쟁이사자처럼';
+    
     const day = '9';
     const safetime ='146';
     const days='목요일';
@@ -20,9 +23,28 @@ export default function DashContainer (){
     const sns2 ='인스타그램';
     const averagewatchingtime = '46'
 
+    const [username, setUsername] = useState('');
+        useEffect(() => {
+            getProfile()
+            .then(data => {
+                console.log('받아온 profile:', data);
+                setUsername(data.nickname || '민서'); // 받아온 username 없으면 기본값
+                
+            })
+            .catch(err => {
+                console.error('프로필 불러오기 실패:', err);
+                setUsername('민서');
+               
+            });
+        }, []);
+    
+    
+
+    
+
     const data = [
-        { type: 'book', image: '/Mummum_new.png', writer: '가즈오 이시구로', booktitle: '<클라라와 태양>' },
-        { type: 'walk', image: '/Mummum_new.png', place: '양재천' },
+        { type: 'book', image: '/mummzhit_book.jpeg', writer: '가즈오 이시구로', booktitle: '<클라라와 태양>' },
+        { type: 'walk', image: '/mummzhit_walk.jpeg', place: '양재천' },
     ]
       
       
@@ -36,6 +58,10 @@ export default function DashContainer (){
             </div>
             <div>
                 <HappyMomentsSection data={data} />
+            </div>
+
+            <div className="emotion-chart">
+                <EmotionChart />
             </div>
             
             <div className ='numb-moments-card'>

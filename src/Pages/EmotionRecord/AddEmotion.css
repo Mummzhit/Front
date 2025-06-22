@@ -251,6 +251,17 @@
     margin-left: 14px;
 }
     
+.trigger-chart-img {
+    width: 306px;
+    height: 159px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
   
 
 

@@ -9,20 +9,23 @@ import MainCalendar from '../Component/MainCalendar/MainCalendar';
 import HeaderNav from '../Component/HeaderNav/HeaderNav';
 import DashContainer from '../Component/MainDashContainer/DashContainer';
 import BottomNav from '../Component/BottomNav/BottomNav';
-import { fetchProfile } from '../Utils/api'; 
+import { getProfile } from '../Utils/api'; 
 
 
 export default function MainPage() {
-    const [username, setUsername] = useState('');
+    
     const [loading, setLoading] = useState(true);
     const level = 1;
     const baseDate = new Date(); // 기준 날짜 (예시)
 
+
+
+    const [username, setUsername] = useState('');
     useEffect(() => {
-        fetchProfile()
+        getProfile()
         .then(data => {
             console.log('받아온 profile:', data);
-            setUsername(data.username || '민서'); // 받아온 username 없으면 기본값
+            setUsername(data.nickname || '민서'); // 받아온 username 없으면 기본값
             setLoading(false);
         })
         .catch(err => {
