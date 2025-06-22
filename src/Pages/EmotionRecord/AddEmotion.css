@@ -1,0 +1,264 @@
+.add-emotion-onboarding-page {
+    position: relative;
+    width: 390px;
+    height: 844px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* 퍼지는 배경이 튀어나가지 않도록 */    
+}
+
+.input-zone{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+
+
+.MumBackGradient{
+
+    position: absolute;
+    width: 328.46px;
+    height: 237.44px;
+    margin-left: 0px;
+    margin-top: 50px;
+    z-index: -1; /* 배경이 앞에 안 오도록 */
+    
+
+}
+
+.button-zone{
+    margin-top: 150px;
+}
+
+.onboarding-button-zone{
+    margin-top: 40px;
+}
+
+ㄴ
+
+
+.MumBackGradient-Butter {
+    position: absolute;
+    width: 189.95px;
+    height: 189.95px;
+    margin-left: 0px;
+    margin-top: 174.17px;
+    background: #F5FCC6;
+    filter: blur(71.2316px);
+    /* filter: blur(20px); */
+
+}
+
+
+
+
+
+.MumBackGradient-Blue{
+    position: absolute;
+    width: 156.71px;
+    height: 156.71px;
+    margin-left: 171.75px;
+    margin-top: 126.68px;
+
+    background: #D9F0EF;
+    filter: blur(71.2316px);
+
+}
+
+.text-zone{
+    margin-left: 20px;
+    font-weight: 500;
+    color: #252420;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-zone p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;;
+}
+
+.text-zone h1{
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.emotion-boxes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.emotion-boxes EmotionBox :hover {
+    border: #FFB43B 20px solid;
+
+}
+
+.section-title {
+    width: 140px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+ 
+
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+
+
+    background: #FFB43B;
+    border-radius: 40px;
+
+    margin-left: 15px;;
+}
+
+.trigger-output-content {
+
+    margin-left: 15px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+
+    
+}
+
+.result-summary{
+    width: 160px;
+    height: 120px;
+    background-color: #FFFCF9;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    color: #FFB43B;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.result-summary p{
+    width: 46px;
+    height: 24px;
+    font-size: 10px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 23px;
+
+
+}
+
+
+.result-summary h1{
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+
+
+}
+
+.result-summary h2{
+    width: 70px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+
+
+}
+
+
+
+.result-summary h3{
+    width: 60px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+
+
+}
+
+.result-summary h4{
+    width: 60px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+
+
+}
+
+.section-title-activity {
+    width: 140px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+ 
+
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 20px;
+    
+
+
+    background: #A3D9B1;
+    border-radius: 40px;
+
+}
+
+.activity-boxes{
+    width: 350px;
+    /* height: 162px; */
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+   
+}
+
+
+.record-button-zone{
+    margin-top: 50px;
+    margin-left: 14px;
+}
+    
+  
+
+
+
+
+
+
+
+
+
+

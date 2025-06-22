@@ -1,0 +1,28 @@
+.emotion-box {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #F1FAEE;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 40px;
+
+}
+
+.emotion-icon {
+    font-size: 36px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+
+
+}
+
+.emotion-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #252420;
+    margin-top: 8px;  
+    text-align: center;
+}

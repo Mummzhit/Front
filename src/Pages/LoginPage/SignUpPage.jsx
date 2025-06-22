@@ -17,17 +17,17 @@ export default function SignUpPage () {
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
-        console.log("입력된 이메일:", e.target.value);
+        // console.log("입력된 이메일:", e.target.value);
     };
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
-        console.log("입력된 비밀번호:", e.target.value);
+        // console.log("입력된 비밀번호:", e.target.value);
     };
 
     const handleNicknameChange = (e) => {
         setNickname(e.target.value);
-        console.log("입력된 닉네임:", e.target.value);
+        // console.log("입력된 닉네임:", e.target.value);
     };
 
 
