@@ -1,0 +1,20 @@
+.scroller-container {
+  display: flex; /* 자식 요소(카드)들을 가로로 나열 */
+  overflow-x: scroll; /* 자식들이 넘칠 경우 가로 스크롤 생성 */
+  
+  /* 카드 사이의 간격 */
+  gap: 12px;
+
+  /* 컨테이너의 위아래 여백 */
+  padding: 16px 0;
+
+  /* 이제 이 컴포넌트는 부모의 좌우 여백(padding) 안쪽에 위치하게 됩니다.
+    스크롤바를 숨기는 코드는 그대로 유지합니다. 
+  */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scroller-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css'; // react-calendar 기본 CSS
-import './ArchivePage.css'; // 커스텀 CSS
+import 'react-calendar/dist/Calendar.css'; 
+import './ArchivePage.css'; 
 import BottomNav from '../Component/BottomNav/BottomNav';
 import { useNavigate } from 'react-router-dom';
 import ArchiveTopNav from '../Component/ArchiveTopNav/ArchiveTopNav';

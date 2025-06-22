@@ -1,0 +1,25 @@
+.add-record-section {
+  margin-top: 24px;
+  padding-bottom: 24px;
+}
+.add-record-card {
+  background-color: #f1f8e9;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: normal;
+  cursor: pointer;
+  gap : 12px;
+  height: 200px;
+  width: 136px;
+}
+.add-record-card:hover {
+  background-color: #e8f5e9;
+}
+.add-record-card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #346547;
+  line-height: 1.4;
+}

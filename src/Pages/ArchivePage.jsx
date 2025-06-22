@@ -1,38 +1,35 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css'; // react-calendar 기본 CSS
-import './ArchivePage.css'; // 커스텀 CSS
-import BottomNav from '../Component/BottomNav/BottomNav';
+import React from 'react';
+import './ArchivePage.css';
 import { useNavigate } from 'react-router-dom';
+
+import BottomNav from '../Component/BottomNav/BottomNav';
 import ArchiveTopNav from '../Component/ArchiveTopNav/ArchiveTopNav';
 import ArchiveDateHeader from '../Component/ArchiveDateHeader/ArchiveDateHeader';
 import MonthlyCalendar from '../Component/MonthlyCalendar/MonthlyCalendar';
-
+import AddRecordCard from '../Component/AddRecordCard/AddRecordCard';
 
 export default function ArchivePage() {
-  const [date, setDate] = useState(new Date());
   const navigate = useNavigate();
 
   const handleAddRecordClick = () => {
     navigate('/archive-adding');
-    console.log("오늘의 멈칫 추가하기 섹션 클릭됨")
-  }
+  };
 
   return (
     <div className="archive-page-container">
       <ArchiveTopNav/>
       <main className="archive-main-content">
         <ArchiveDateHeader/>
-        <MonthlyCalendar/>
+        <h2 className="title">오늘의 멈칫을 기록해 볼까요?</h2>
 
-        {/* 4. 기록 추가 카드 */}
-        <section className="add-record-section" onClick={handleAddRecordClick}>
-          <div className="add-record-card">
-            <p>오늘의 멈칫<br/>추가하기</p>
-          </div>
+        <section className="calendar-section">
+          <MonthlyCalendar/>
         </section>
+
+        <AddRecordCard onClick={handleAddRecordClick} />
+
       </main>
-      <BottomNav className='BottomNav' onTabChange={(tabId) => console.log(`Active tab changed to: ${tabId}`)} /> 
+      <BottomNav className='BottomNav' /> 
     </div>
   );
 }

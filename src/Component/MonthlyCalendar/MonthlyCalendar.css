@@ -1,19 +1,14 @@
 .monthly-calendar {
   width: 100%;
-  padding: 20px;
   background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  box-sizing: border-box;
 }
 
-/* 요일 헤더 (sun, mon, ...) */
 .calendar-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* 7개의 동일한 너비의 열 생성 */
   text-align: center;
   margin-bottom: 12px;
-  color: #888;
+  color: #B5B5B5;
   font-size: 14px;
   font-weight: 500;
 }
@@ -26,20 +21,19 @@
   color: #5EB1FF;
 }
 
-/* 날짜 그리드 */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  row-gap: 0px;
 }
 
-/* 날짜 셀 기본 스타일 */
 .day-cell {
   display: flex;
-  font : Pretendard;
+  font-family: Pretendard;
   justify-content: center;
-  font-weight: 500;
+  font-weight: 400;
   align-items: center;
-  height: 40px;
+  height: 35px;
   font-size: 16px;
   color: #A3D9B1;
   border-radius: 50%;
@@ -57,17 +51,13 @@
   color: #c2e0c6; 
 }
 
-/* 이번 달이 아닌 날짜들 */
 .day-cell.not-current-month {
   color: #e0f1e3; 
 }
 
-/* 오늘 날짜 (초록색 동그라미) */
 .day-text.today {
-  /* ▼▼▼ 여기서 원의 크기를 조절합니다 ▼▼▼ */
   width: 32px;
   height: 32px;
-  /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
   background-color: #A3D9B1;
   color: #FFFFFF;
@@ -75,23 +65,18 @@
 }
 
 .day-text.today::after {
-  /* 가상 요소 생성을 위한 필수 속성 */
   content: ''; 
 
-  /* 위치 설정 */
-  position: absolute; /* 부모(.day-text.today)를 기준으로 위치 결정 */
-  top: -8px;   /* 부모보다 8px 위에 */
-  left: -8px;  /* 부모보다 8px 왼쪽에 */
-  right: -8px; /* 부모보다 8px 오른쪽에 */
-  bottom: -8px;/* 부모보다 8px 아래에 */
-  /* -> 결과적으로 부모보다 사방으로 8px씩 더 큰 영역을 차지 */
+  position: absolute; 
+  top: -8px;   
+  left: -8px; 
+  right: -8px; 
+  bottom: -8px;
 
-  /* 그라데이션 배경 */
   background: radial-gradient(circle, #A3D9B1, transparent 70%);
   
-  /* 모양 및 효과 */
-  border-radius: 50%; /* 원 모양으로 만들기 */
-  filter: blur(10px);   /* 가장자리를 10px만큼 부드럽게 번지게 함 */
-  z-index: -1;          /* 숫자(13)보다 뒤에 위치하도록 설정 */
+  border-radius: 50%; 
+  filter: blur(10px);   
+  z-index: -1;          
 }
 

@@ -1,40 +1,22 @@
-/* 전체 페이지 컨테이너의 레이아웃과 배경색만 정의합니다. */
+/* 전체 페이지 컨테이너의 레이아웃 */
 .archive-page-container {
   background-color: #ffffff;
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* 메인 컨텐츠 영역의 레이아웃 */
+.archive-main-content {
+  flex-grow: 1;
+  overflow-y: auto;
   padding: 0 24px;
   box-sizing: border-box;
 }
 
-/* 메인 컨텐츠 영역의 레이아웃만 정의합니다. */
-.archive-main-content {
-  flex-grow: 1; /* 상단/하단 네비게이션을 제외한 모든 공간을 차지 */
-  overflow-y: auto; /* 내용이 길어지면 세로 스크롤 생성 */
-}
-
-/* ArchivePage에만 존재하는 '기록 추가 카드' 섹션의 스타일은 남겨둡니다. */
-.add-record-section {
+/* 페이지 내의 각 섹션을 구분하기 위한 스타일 */
+.calendar-section {
   margin-top: 24px;
-  padding-bottom: 24px;
-}
-.add-record-card {
-  background-color: #f1f8e9;
-  border-radius: 20px;
-  padding: 16px;
-  display: flex;
-  align-items: normal;
-  cursor: pointer;
-  gap : 12px;
-  height: 240px;
-  width: 180px;
-}
-.add-record-card p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: #555;
-  line-height: 1.4;
-  font-family: Pretendard;
+
+
 }
