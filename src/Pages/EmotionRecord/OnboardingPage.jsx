@@ -8,7 +8,7 @@ export default function AddEmotionOnboardingPage () {
     const navigate = useNavigate();
 
     const handleEmotionRecord = () => {
-        navigate ('/SelectEmotion');
+        navigate ('/select-emotion');
         console.log ('record button is pressed')
        
     };

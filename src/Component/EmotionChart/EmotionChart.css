@@ -1,0 +1,35 @@
+.weekly-line-chart {
+  width: 350px;
+  height: auto;
+  margin-left: 0px;;
+}
+
+
+.weekly-line-chart .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.weekly-line-chart h1 {
+    font-size: 16px;
+    font-weight: 600 ;
+    color: #252420;
+
+}
+
+
+.bubble {
+  background: white;
+  color: #9DC1E5;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  
+  text-align: center;
+  white-space: nowrap;
+}
+

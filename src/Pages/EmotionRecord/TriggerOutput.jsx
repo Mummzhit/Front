@@ -12,7 +12,7 @@ export default function SelectEmotion() {
     
 
     const handleStore = () => {
-        
+        navigate ('/main');
         console.log ('store button is pressed')
     };
 
@@ -24,6 +24,7 @@ export default function SelectEmotion() {
                 <p>어제보다 나은 {username}님을 응원해요</p>
                 <h1>이번 주의 트리거 분석이 도착했어요!</h1>
             </div>
+            <img className='trigger-chart-img' src = '/emotion-chart.png' alt='멈칫한 순간 이미지'/>
             <div className="weekly-trigger-output"> 
                 <div className="section-title">
                     이번주 분석을 요약했어요

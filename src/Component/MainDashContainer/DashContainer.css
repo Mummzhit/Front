@@ -13,6 +13,20 @@
     
 }
 
+.emotion-chart {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+
+    width: 350px;
+    height: auto;
+    font-size: 12px;
+    font-weight: 400;
+    /* padding: 10px; */
+    background-color:transparent;
+    overflow: hidden;
+
+}
 
 .numb-moments-card {
     width: 335px;

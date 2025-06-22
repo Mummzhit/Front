@@ -1,10 +1,17 @@
 
 export async function fetchProfile() {
-    const token = sessionStorage.getItem('ACCESS_TOKEN');
-    const response = await fetch('http://localhost:8080/api/profile', {
-        headers: { 'Authorization': token }
-    });
-    return response.json();
+  const token = sessionStorage.getItem('ACCESS_TOKEN');
+  const response = await fetch('http://localhost:8080/api/auth/profile', {
+    headers: { 'Authorization': token }
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();  // JSON 아닐 수 있어서
+    console.error('프로필 요청 실패 응답:', errorText);
+    throw new Error(`프로필 요청 실패 (status: ${response.status})`);
+  }
+
+  return response.json();  // 여기는 ok일 때만 실행
 }
 
 async function refreshTokens(accessToken, refreshToken) {
@@ -69,7 +76,7 @@ export async function getProfile() {
   const token = sessionStorage.getItem('ACCESS_TOKEN');
   console.log('프로필 요청 시 토큰:', token);
 
-  const response = await fetch('http://localhost:8080/api/profile', {
+  const response = await fetch('http://localhost:8080/api/auth/profile', {
     method: 'GET',
     headers: {
       'Authorization': token, 
