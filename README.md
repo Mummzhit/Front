@@ -13,39 +13,28 @@
 1. 저장소 클론  
    ```bash
    git clone https://github.com/사용자명/멈칫.git
-패키지 설치
+2. 패키지 설치
+   ```bash
+   cd mummzhit-frontend
+   npm install
 
-bash
-코드 복사
-cd 멈칫
-npm install
-개발 서버 실행
+3. 개발 서버 실행
+   ```bash
+   npm start
 
-bash
-코드 복사
-npm start
-사용법
-앱 실행 후 로그인 또는 회원가입
+4. 사용법
+   - 앱 실행 후 로그인 또는 회원가입
+   - 감정과 시청 시간을 입력
+   - 입력한 데이터는 자동 저장됨
 
-감정과 시청 시간을 입력
+5. 기술 스택
+   - React
+   - JavaScript
+   - CSS 
 
-입력한 데이터는 자동 저장됨
+6. 팀 내 기여
+- 저장소 Fork
+- 브랜치 생성 (feature/기능명, fix/버그명)
+- 커밋 및 푸시
+- Pull Request 제출
 
-기술 스택
-React
-
-JavaScript (ES6+)
-
-CSS / Styled-components
-
-기여 방법
-저장소 Fork
-
-브랜치 생성 (feature/기능명, fix/버그명)
-
-커밋 및 푸시
-
-Pull Request 제출
-
-라이선스
-MIT License
