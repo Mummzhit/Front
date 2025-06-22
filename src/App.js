@@ -13,6 +13,7 @@ import ArchiveAddingPage from './Pages/ArchiveAddingPage';
 import ArchiveAddedPage from './Pages/ArchiveAddedPage';
 import AddEmotionOnboardingPage from './Pages/EmotionRecord/OnboardingPage';
 import SelectEmotion from './Pages/EmotionRecord/SelectEmotion';
+import TriggerOutput from './Pages/EmotionRecord/TriggerOutput'; // Assuming you have this page
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path='/archive-added' element={<ArchiveAddedPage />} />
           <Route path='/add-emotion' element={<AddEmotionOnboardingPage />} />
           <Route path='/select-emotion' element={<SelectEmotion />} />
+          <Route path='/trigger-output' element={<TriggerOutput />} />
+
         
           
 

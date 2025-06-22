@@ -1,15 +1,33 @@
 
 export async function fetchProfile() {
     const token = sessionStorage.getItem('ACCESS_TOKEN');
-    const response = await fetch('/api/profile', {
+    const response = await fetch('http://localhost:8080/api/profile', {
         headers: { 'Authorization': token }
     });
     return response.json();
 }
 
+async function refreshTokens(accessToken, refreshToken) {
+  const response = await fetch('http://localhost:8080/api/refresh-token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ accessToken, refreshToken }),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.error || 'Failed to refresh tokens');
+  }
+
+  return response.json();  // 새 토큰 쌍이 담긴 객체
+}
+
+
 // 로그인 페이지 API 관리
 export async function login(email, password) {
-    const response = await fetch('**API 주소 입력 여기다 해주세요-히히', {
+    console.log('로그인 요청:', { email, password });
+
+    const response = await fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -17,13 +35,17 @@ export async function login(email, password) {
 
     if (!response.ok) throw new Error('로그인 실패');
 
-    return response.json();
-}
+    const data = await response.json();
+
+    console.log('로그인 응답 토큰:', data.accessToken);
+
+    return data;
+  }
 
 
 // 회원가입 페이지 API 관리
 export async function signUp(email, password, nickname) {
-  const response = await fetch('http://your-api-url/sign-up', {  // ← 실제 주소로 교체
+  const response = await fetch('http://localhost:8080/api/auth/signup', {  
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -39,5 +61,22 @@ export async function signUp(email, password, nickname) {
     }
   }
 
+  return response.json();
+}
+
+// 프로필 페이지 API 관리
+export async function getProfile() {
+  const token = sessionStorage.getItem('ACCESS_TOKEN');
+  console.log('프로필 요청 시 토큰:', token);
+
+  const response = await fetch('http://localhost:8080/api/profile', {
+    method: 'GET',
+    headers: {
+      'Authorization': token, 
+      'Content-Type': 'application/json'
+    }
+  });
+
+  if (!response.ok) throw new Error('프로필 불러오기 실패');
   return response.json();
 }

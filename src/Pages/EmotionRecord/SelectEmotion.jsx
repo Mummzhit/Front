@@ -9,7 +9,7 @@ export default function SelectEmotion() {
     const navigate = useNavigate();
 
     const handleEmotionRecord = () => {
-        navigate ('/TriggerOutput');
+        navigate ('/trigger-output');
         console.log ('record button is pressed')
     };
 
@@ -22,23 +22,46 @@ export default function SelectEmotion() {
                 <h1>오늘 느낀 감정을 모두 선택해주세요</h1>
     
             </div>
-            <EmotionBox
-                icon='😆'
-                text= '기뻐요'
-            />
-            <EmotionBox
-                icon='😆'
-                text= '기뻐요'
-            />
-            <EmotionBox
-                icon='😢'
-                text= '슬퍼요'
-            />
-            <EmotionBox
-                icon='😡'
-                text= '화나요'
-            />
-            <div className="onboarding-button-zone">
+            <div className="emotion-boxes">
+                
+                <EmotionBox
+                    icon='😆'
+                    text= '기뻐요'
+                />
+            
+                <EmotionBox
+                    icon='🥱'
+                    text= '피곤해요'
+                />
+                <EmotionBox
+                    icon='🤓'
+                    text= '궁금해요'
+                />
+                <EmotionBox
+                    icon='😱'
+                    text= '불안해요'
+                />
+            
+                <EmotionBox
+                    icon='🙂'
+                    text= '평온해요'
+                />
+                <EmotionBox
+                    icon='😡'
+                    text= '화나요'
+                />
+                <EmotionBox
+                    icon='😶'
+                    text= '지루해요'
+                />
+                <EmotionBox
+                    icon='😭'
+                    text= '슬퍼요'
+                />
+            
+              
+            </div>
+            <div className="record-button-zone">
                 <LoginButton type = 'login' text ='기록하기' onClick={handleEmotionRecord}/>
             </div>
         </div>

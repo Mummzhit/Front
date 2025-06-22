@@ -38,7 +38,7 @@
     margin-top: 40px;
 }
 
-
+ㄴ
 
 
 .MumBackGradient-Butter {
@@ -88,6 +88,170 @@
     font-size: 20px;
     font-weight: 600;
 }
+
+.emotion-boxes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.emotion-boxes EmotionBox :hover {
+    border: #FFB43B 20px solid;
+
+}
+
+.section-title {
+    width: 140px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+ 
+
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+
+
+    background: #FFB43B;
+    border-radius: 40px;
+
+    margin-left: 15px;;
+}
+
+.trigger-output-content {
+
+    margin-left: 15px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+
+    
+}
+
+.result-summary{
+    width: 160px;
+    height: 120px;
+    background-color: #FFFCF9;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    color: #FFB43B;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.result-summary p{
+    width: 46px;
+    height: 24px;
+    font-size: 10px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 23px;
+
+
+}
+
+
+.result-summary h1{
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+
+
+}
+
+.result-summary h2{
+    width: 70px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+
+
+}
+
+
+
+.result-summary h3{
+    width: 60px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+
+
+}
+
+.result-summary h4{
+    width: 60px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+
+
+}
+
+.section-title-activity {
+    width: 140px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+ 
+
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 20px;
+    
+
+
+    background: #A3D9B1;
+    border-radius: 40px;
+
+}
+
+.activity-boxes{
+    width: 350px;
+    /* height: 162px; */
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+   
+}
+
+
+.record-button-zone{
+    margin-top: 50px;
+    margin-left: 14px;
+}
+    
+  
 
 
 
